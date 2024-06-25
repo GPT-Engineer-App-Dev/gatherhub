@@ -1,5 +1,5 @@
 import { Container, VStack, Heading, Text, Button, Box, Image } from "@chakra-ui/react";
-import { FaCalendarAlt, FaPlusCircle } from "react-icons/fa";
+import { FaCalendarAlt, FaPlusCircle, FaTicketAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -7,7 +7,7 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={6}>
+      <VStack spacing={4}>
         <Heading as="h1" size="2xl" textAlign="center">
           Welcome to EventMaster
         </Heading>
@@ -22,6 +22,9 @@ const Index = () => {
         </Button>
         <Button leftIcon={<FaPlusCircle />} colorScheme="blue" size="lg" onClick={() => navigate('/create-event')}>
           Create New Event
+        </Button>
+        <Button leftIcon={<FaTicketAlt />} colorScheme="purple" size="lg" onClick={() => navigate('/book-ticket')}>
+          Book Tickets
         </Button>
       </VStack>
     </Container>
